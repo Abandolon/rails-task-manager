@@ -1,0 +1,21 @@
+<div class="task-list">
+  <ul>
+    <% @tasks.each do |task| %>
+    <div class="list-inline">
+      <li class="list-inline-item">
+      <% if task.completed == true %>
+        <%= "✅"%>
+      <% else %>
+        <%=  "⬜" %>
+      <% end %>
+  </li>
+      <li class="list-inline-item"> <%= link_to task.title, task_path(task) %></li>
+      <li class="list-inline-item" id="trash-can"> <%= link_to "🗑", delete_task_path(task), method: :delete %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>
+
+<div class="footer">
+  <%= link_to "➕ Add Your New Task", tasks_new_path  %>
+</div>

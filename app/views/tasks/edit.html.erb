@@ -1,0 +1,17 @@
+<div class="card">
+  <%= form_for(@task) do |task| %>
+      <%= task.label :title, wrapper_html: { class: 'text-field' }%>
+      <%= task.text_field :title%>
+      <%= task.label :details %>
+      <%= task.text_field :details %>
+      <p></p>
+      <%= task.check_box :completed %>
+      <%= task.label :completed %>
+      <%= task.submit %>
+  <% end %>
+</div>
+
+<div class="footer">
+  <p><%= link_to "Back To All Tasks", tasks_path  %></p>
+  <p><%= link_to "Back To This Task", task_path(@task)  %></p>
+</div>

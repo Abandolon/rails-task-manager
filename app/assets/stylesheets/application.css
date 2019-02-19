@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+  background-color: #DCCFEC;
+ }
+
+ .container {
+  width: 600px;
+  color: #4F517D;
+  background-color: #DDC4DD;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px #4F517D;
+ }
+
+.task-list {
+  text-align: left;
+  margin-left: 66px;
+}
+
+ li#trash-can a {
+  text-align: right;
+}
+
+.card {
+  background-color: #DCCFEC;
+}
+
+.task-field {
+  border-radius: 10px;
+}

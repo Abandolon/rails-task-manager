@@ -1,0 +1,18 @@
+<div class="card">
+
+  <h3 class="card-header"><%= @task.title %></h3>
+
+  <p class="card-details"> <%= @task.details %></p>
+
+    <% if @task.completed == true %>
+      <%= "✅ This task is completed"%>
+    <% else %>
+      <%=  "⬜ This task has not been completed" %>
+    <% end %>
+</div>
+
+
+  <div class="footer">
+    <p class="card-status"><%= link_to "Update This Task", edit_task_path %></p>
+    <p><%= link_to "Go Back To Your Tasks", tasks_path  %></p>
+  </div>
